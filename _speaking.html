@@ -1,10 +1,12 @@
+<h1>Speaking &amp; teaching</h1>
+
 <p>I regularly participate in hackathons and teach and speak about practical technology and data journalism.</p>
 
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-6">
     <ul>
       {% for presentation in presentations %}
-      {% if loop.index % 3 == 1 %}
+      {% if loop.index % 2 == 1 %}
       <li>
         <a href="{{ presentation.link }}" class="presentation-title">{{ presentation.title }}</a><br/>
         <span class="presentation-location">{{ presentation.location }}</span>
@@ -14,23 +16,10 @@
       {% endfor %}
     </ul>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-6">
     <ul>
       {% for presentation in presentations %}
-      {% if loop.index % 3 == 2 %}
-      <li>
-        <a href="{{ presentation.link }}" class="presentation-title">{{ presentation.title }}</a><br/>
-        <span class="presentation-location">{{ presentation.location }}</span>
-        {% if presentation.video_link %} <a href="{{ presentation.video_link }}" class="video-link"><i class="fa fa-caret-square-o-right"></i> Watch video</a>{% endif %}
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="col-md-4">
-    <ul>
-      {% for presentation in presentations %}
-      {% if loop.index % 3 == 0 %}
+      {% if loop.index % 2 == 0 %}
       <li>
         <a href="{{ presentation.link }}" class="presentation-title">{{ presentation.title }}</a><br/>
         <span class="presentation-location">{{ presentation.location }}</span>
