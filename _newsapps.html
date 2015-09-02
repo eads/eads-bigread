@@ -1,0 +1,8 @@
+<h1>News applications</h1>
+
+<p>Since 2012, I've been building news applications professionally. First for the Chicago Tribune News Applications team (2012-2014) and most recently the NPR Visuals Team (2014-present).</p>
+
+{% for app in newsapps %}
+<h2><a href="{{ app.url }}">{{ app.title }}</a></h2>
+<p>{{ app.description }}</p>
+{% endfor %}
