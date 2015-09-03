@@ -23,10 +23,9 @@
 #}
 
 {# Customize js #}
-{#
-{% block js %}
-{{ js.push('js/myfile.js')
-{% endblock js %}
-#}
+{% block library_js %}
+{{ super() }}
+{{ JS.push('lib/jquery-unveil/jquery.unveil.js') }}
+{% endblock library_js %}
 
 

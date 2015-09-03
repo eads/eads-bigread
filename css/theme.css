@@ -309,16 +309,21 @@ ul.banner-social-buttons {
 }
 
 .portfolio-section {
-  margin-bottom: 25px;
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
-.portfolio-section h2, .portfolio-section p {
+.portfolio-section:not(.has-image) p,
+.portfolio-section:not(.has-image) h2 {
     display: inline;
 }
-.portfolio-section p {
+.portfolio-section:not(.has-image) p {
     padding-left: 10px;
     margin-left: 4px;
     border-left: 1px dotted #333;
+}
+.intro-para {
+    font-style: italic;
 }
 
 @media(max-width:1199px) {

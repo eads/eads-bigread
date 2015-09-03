@@ -1,10 +1,24 @@
 <h1>News applications</h1>
 
-<p>Since 2012, I've been building news applications professionally. First for the Chicago Tribune News Applications team (2012-2014) and most recently the NPR Visuals Team (2014-present).</p>
+<p class="intro-para">Since 2012, I've been building news applications professionally. First for the Chicago Tribune News Applications team (2012-2014) and most recently the NPR Visuals Team (2014-present).</p>
 
 {% for app in newsapps %}
+{% if app.image %}
+<hr/>
+<div class="row portfolio-section has-image">
+  <div class="col-sm-4">
+      <img src="img/intro.jpg" data-src="{{ app.image }}" class="img-responsive"/>
+  </div>
+  <div class="col-sm-8">
+    <h2><a href="{{ app.url }}">{{ app.title }}</a></h2>
+    <p>{{ app.description|safe }}</p>
+  </div>
+</div>
+<hr/>
+{% else %}
 <div class="portfolio-section">
   <h2><a href="{{ app.url }}">{{ app.title }}</a></h2>
   <p>{{ app.description|safe }}</p>
 </div>
+{% endif %}
 {% endfor %}
