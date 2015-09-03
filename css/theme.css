@@ -145,6 +145,9 @@
         height: 100%;
         padding: 0;
     }
+    .intro a {
+        color: #fffac2;
+    }
 
     .intro .intro-body {
       text-shadow: 2px 2px #3E3E3E;
@@ -303,6 +306,19 @@
 
 ul.banner-social-buttons {
     margin-top: 0;
+}
+
+.portfolio-section {
+  margin-bottom: 25px;
+}
+
+.portfolio-section h2, .portfolio-section p {
+    display: inline;
+}
+.portfolio-section p {
+    padding-left: 10px;
+    margin-left: 4px;
+    border-left: 1px dotted #333;
 }
 
 @media(max-width:1199px) {

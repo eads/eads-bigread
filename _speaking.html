@@ -2,31 +2,10 @@
 
 <p>I regularly participate in hackathons and teach and speak about practical technology and data journalism.</p>
 
-<div class="row">
-  <div class="col-md-6">
-    <ul>
-      {% for presentation in presentations %}
-      {% if loop.index % 2 == 1 %}
-      <li>
-        <a href="{{ presentation.link }}" class="presentation-title">{{ presentation.title }}</a><br/>
-        <span class="presentation-location">{{ presentation.location }}</span>
-        {% if presentation.video_link %} <a href="{{ presentation.video_link }}" class="video-link"><i class="fa fa-caret-square-o-right"></i> Watch video</a>{% endif %}
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="col-md-6">
-    <ul>
-      {% for presentation in presentations %}
-      {% if loop.index % 2 == 0 %}
-      <li>
-        <a href="{{ presentation.link }}" class="presentation-title">{{ presentation.title }}</a><br/>
-        <span class="presentation-location">{{ presentation.location }}</span>
-        {% if presentation.video_link %} <a href="{{ presentation.video_link }}" class="video-link"><i class="fa fa-caret-square-o-right"></i> Watch video</a>{% endif %}
-      </li>
-      {% endif %}
-      {% endfor %}
-    </ul>
-  </div>
+
+{% for presentation in presentations %}
+<div class="portfolio-section">
+  <h2><a href="{{ presentation.link }}">{{ presentation.title }}</a></h2>
+  <p>{{ presentation.location|safe }} {% if presentation.video_link %} <a href="{{ presentation.video_link }}" class="video-link"><i class="fa fa-caret-square-o-right"></i> Watch video</a>{% endif %}</p>
 </div>
+{% endfor %}
