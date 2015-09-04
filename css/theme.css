@@ -122,12 +122,29 @@
     height: 100%;
     overflow: hidden;
 }
+.panel0-container .credit {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    color: #eee;
+    z-index: 50;
+    padding: 5px 12px 5px 5px;
+}
+
 .panel0 img{
     max-width: inherit;
     text-align: center;
     width:100%;
     left: -1px;
 }
+
+.credit p {
+    font-size: 14px;
+    text-align: right;
+    margin: 0;
+}
+
 
 .intro .intro-body .brand-heading {
     font-size: 40px;
